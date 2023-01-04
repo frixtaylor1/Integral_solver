@@ -47,7 +47,7 @@ function displayResult( limA, limB, equation, result ) {
 		const element = document.getElementById("callableDiv");
 		element.remove();
 	}
-	document.getElementById("resultTitle").insertAdjacentHTML("beforebegin", "<div id='callableDiv'><br><hr>");
+	document.getElementById("resultTitle").insertAdjacentHTML("beforebegin", "<div id='callableDiv'><br>");
 	document.getElementById("resultTitle").innerHTML = "<i>Resultado</i>"
 	document.getElementById("result")
 		.innerHTML = 
