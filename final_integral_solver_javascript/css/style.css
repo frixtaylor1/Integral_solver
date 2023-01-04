@@ -15,6 +15,12 @@ input {
 
 }
 
+input:focus{
+
+    background-color:rgb(246, 228, 194);
+
+}
+
 ::placeholder {
 
     color: rgb(93, 54, 4);
