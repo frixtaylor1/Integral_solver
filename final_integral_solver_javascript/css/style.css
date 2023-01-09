@@ -1,24 +1,26 @@
 body {
     font-style: italic;
     color: aliceblue;
-    text-shadow: 0 0 5px rgba(116, 80, 3, 0.895),0 0 5px rgba(116, 80, 3, 0.895),0 0 5px gold;
+    text-shadow: 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px gold;
     background: url(math.jpg);
 }
 
 input {
-    
+
     border-radius: 2px;
     border-color: rgb(239, 212, 178);
     background-color: rgb(232, 188, 116);
-    
+}
 
+input:focus {
+
+    background-color: rgb(246, 228, 194);
 
 }
 
-input:focus{
+input::selection {
 
-    background-color:rgb(246, 228, 194);
-
+    background-color: rgb(237, 199, 104);
 }
 
 ::placeholder {
@@ -26,8 +28,8 @@ input:focus{
     color: rgb(93, 54, 4);
 }
 
- button {
-    
+button {
+
     position: relative;
     color: rgb(91, 58, 5);
     border-radius: 10px;
@@ -35,33 +37,32 @@ input:focus{
     background-color: rgb(230, 171, 83);
     padding: 5px 30px;
     transition: 0.2;
- }
-
-button:hover{
-
-    background-color: rgb(247, 227, 176);
-    box-shadow: 0 0 10px rgb(247, 227, 176),0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176) ;
-    border-color: white;
-    color:rgb(209, 164, 92) ;
 }
 
+button:hover {
 
-
+    background-color: rgb(247, 227, 176);
+    box-shadow: 0 0 10px rgb(247, 227, 176), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
+    border-color: white;
+    color: rgb(209, 164, 92);
+}
 
 li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+
 }
+
 p.parrExamples {
     text-align: left;
-};
+}
+
+;
 
 span {
     position: relative;
-};
+}
 
 span sup {
     position: absolute;
     left: 0;
-};
-
+}
