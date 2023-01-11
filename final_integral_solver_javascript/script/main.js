@@ -47,17 +47,19 @@ function displayResult( limA, limB, equation, result ) {
 		const element = document.getElementById("callableDiv");
 		element.remove();
 	}
-	document.getElementById("resultTitle").insertAdjacentHTML("beforebegin", "<div id='callableDiv'><br>");
-	document.getElementById("resultTitle").innerHTML = "<i>Resultado</i>"
 	document.getElementById("result")
 		.innerHTML = 
-			`<p>Resultado: &#x222b;
-				<span>
-					<sup>${limB}</sup>
-					<sub>${limA}</sub>
-				</span>
-				<i>(${equation})dx = </i>${result} </p>`;
-	/* &#x222b is the html code for the Integral */
+			`<div id="resultdiv">
+				<i id="result-title">Resultado</i>
+					<p>Resultado: &#x222b;
+						<span>
+							<sup>${limB}</sup>
+							<sub>${limA}</sub>
+						</span>
+					<i>(${equation})dx = </i>${result} </p>
+			</div>`;
+					/* &#x222b is the html code for the Integral */
+
 	counter = counter + 1;
 }
 
@@ -71,6 +73,7 @@ buttonForm.addEventListener("click", () => {
     const result = integrate( limA, limB, equation, 0.001 );
 
 	displayResult( limA, limB, expression.value, result );
+
 });
 
 String.prototype.replaceAll = function (find, replace) {
