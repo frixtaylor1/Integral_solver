@@ -9,22 +9,25 @@
 </head>
 <body>
     <center>
-        <h2> Resolvedor de Integrales Definidas </h2>
+        <h2 id="main-titlle"> Resolvedor de Integrales Definidas </h2>
         <br>
-        <p>Desde el límite:</p>
-        <input type="text" name="limitA" id="limitA" placeholder="Límite A..."><br>
-        <p>Hasta el Límite:</p>
-        <input type="text" name="limitB" id="limitB" placeholder="Límite B..."><br>
-        <p>Expresión:</p>
-        <input type="text" name="" id="expression" placeholder="Expresión..."><br><br>
-        <br>
-        <button id="sendForm"> Evaluar </button>
+    <div id="main-box">
+        <div id="form-box">
+            <p>Desde el límite:</p>
+            <input type="text" name="limitA" id="limitA" placeholder="Límite A..."><br>
+            <p>Hasta el Límite:</p>
+            <input type="text" name="limitB" id="limitB" placeholder="Límite B..."><br>
+            <p>Expresión:</p>
+            <input type="text" name="" id="expression" placeholder="Expresión..."><br><br>
+            <br>
+            <button id="sendForm"> Evaluar </button>
+        </div>
         <br>
         <h3 id="resultTitle"></h3>    
-        <p id="result"></p>
+        <div id="result"></div>
         <br>
-        <h3>Tipos de ejemplos de expresiones</h3>
-        <div style="width: 300px; height: 160px;">
+        <div id="exemples">
+            <h3>Tipos de ejemplos de expresiones</h3>
             <table>
                 <ul>
                     <li><p class="parrExamples">3*x/3</p></li>
@@ -35,10 +38,11 @@
                 </ul>
             </table>
         </div>
+     </div>   
     </center> 
     <script src="./script/main.js"></script>
     <br>
     <br>
-    <center><footer> Copyright © 2022 Kevin Daniel Taylor & Mateo José Roca - kevinmusic123@gmail.com - mateojoserocaclemntis17@gmail.com </footer></center>
+    <center><footer id="Copyright"> Copyright © 2022 Kevin Daniel Taylor & Mateo José Roca - kevinmusic123@gmail.com - mateojoserocaclemntis17@gmail.com </footer></center>
 </body>
 </html>

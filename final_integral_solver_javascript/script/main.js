@@ -36,17 +36,16 @@ function integrate( from, to, equation, stepSize ) {
 		var h2 = evaluateEquation( i + stepSize, equation );
 		area += trapezoidRule( h1, h2, stepSize );
 	}
+	if( area < 0.0)
+	{
+		area *= -1.0;
+	}
 	return area;
 }
 
 let counter = 0;
 
 function displayResult( limA, limB, equation, result ) {
-	if(counter != 0)
-	{
-		const element = document.getElementById("callableDiv");
-		element.remove();
-	}
 	document.getElementById("result")
 		.innerHTML = 
 			`<div id="resultdiv">
@@ -58,7 +57,7 @@ function displayResult( limA, limB, equation, result ) {
 						</span>
 					<i>(${equation})dx = </i>${result} </p>
 			</div>`;
-					/* &#x222b is the html code for the Integral */
+			/* &#x222b is the html code for the Integral */
 
 	counter = counter + 1;
 }
