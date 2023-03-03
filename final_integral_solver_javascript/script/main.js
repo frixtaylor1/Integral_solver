@@ -8,11 +8,13 @@
 */
 const limitA 	 = document.getElementById("limitA");
 const limitB 	 = document.getElementById("limitB");
+const step 	     = document.getElementById("stepSize");
 const expression = document.getElementById("expression");
 const buttonForm = document.getElementById("sendForm");
 
-function trapezoidRule(h1, h2, length) {
-	return ((h1 + h2) / 2) * length;
+function trapezoidRule( h1, h2, length ) {
+	var result = (( ( h1 + h2 ) / 2 ) * length );
+	return (result < 0 ) ? result *= -1 : result;
 }
 
 function evaluateEquation( x, equation ) {
@@ -29,21 +31,19 @@ const parseExpression = function( anExpression ) {
 	return equation;
 }
 
+function isNegative( area ) {
+	return area < 0;
+}
+
 function integrate( from, to, equation, stepSize ) {
-	var area = 0;
+	var area = 0.0;
 	for ( var i = from * 1.0 ; i < to; i += stepSize ) {
 		var h1 = evaluateEquation( i, equation );
 		var h2 = evaluateEquation( i + stepSize, equation );
 		area += trapezoidRule( h1, h2, stepSize );
 	}
-	if( area < 0.0)
-	{
-		area *= -1.0;
-	}
 	return area;
 }
-
-let counter = 0;
 
 function displayResult( limA, limB, equation, result ) {
 	document.getElementById("result")
@@ -58,8 +58,6 @@ function displayResult( limA, limB, equation, result ) {
 					<i>(${equation})dx = </i>${result} </p>
 			</div>`;
 			/* &#x222b is the html code for the Integral */
-
-	counter = counter + 1;
 }
 
 buttonForm.addEventListener("click", () => {
@@ -67,9 +65,11 @@ buttonForm.addEventListener("click", () => {
     const limA = limitA.value.replaceAll("pi", "Math.PI");
 	const limB = limitB.value.replaceAll("pi", "Math.PI");
     
-    let equation = parseExpression( expression );
+    const stepOfIteration = step.value.replaceAll("pi", "Math.PI");
+	
+	let equation = parseExpression( expression );
 
-    const result = integrate( limA, limB, equation, 0.001 );
+    const result = integrate( eval(limA), eval(limB), equation, parseFloat(stepOfIteration) );
 
 	displayResult( limA, limB, expression.value, result );
 
