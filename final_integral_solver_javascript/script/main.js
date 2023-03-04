@@ -46,32 +46,32 @@ function integrate( from, to, equation, stepSize ) {
 }
 
 function displayResult( limA, limB, equation, result ) {
+	let tmplimA = limA.value.replaceAll('/360*2*Math.PI', 'degrees');
+	let tmpLimB = limB.value.replaceAll('/360*2*Math.PI', 'degrees');
 	document.getElementById("result")
 		.innerHTML = 
 			`<div id="resultdiv">
 				<i id="result-title">Resultado</i>
-					<p>Resultado: &#x222b;
-						<span>
-							<sup>${limB}</sup>
-							<sub>${limA}</sub>
-						</span>
-					<i>(${equation})dx = </i>${result} </p>
+					<p>Resultado: from ${tmplimA} ${tmpLimB}: &#x222b;
+						<i>(${equation})dx = </i>${result} </p>
 			</div>`;
 			/* &#x222b is the html code for the Integral */
 }
 
 buttonForm.addEventListener("click", () => {
 	
-    const limA = limitA.value.replaceAll("pi", "Math.PI");
-	const limB = limitB.value.replaceAll("pi", "Math.PI");
+    const limA = limitA.value.replaceAll("pi", "Math.PI")
+		.replace("°", "/360*2*Math.PI");
+	const limB = limitB.value.replaceAll("pi", "Math.PI")
+		.replace("°", "/360*2*Math.PI");
     
-    const stepOfIteration = step.value.replaceAll("pi", "Math.PI");
+    const stepOfIteration = step.value;
 	
 	let equation = parseExpression( expression );
 
     const result = integrate( eval(limA), eval(limB), equation, parseFloat(stepOfIteration) );
 
-	displayResult( limA, limB, expression.value, result );
+	displayResult( limitA, limitB, expression.value, result );
 
 });
 
