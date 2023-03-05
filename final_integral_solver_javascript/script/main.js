@@ -53,7 +53,7 @@ function displayResult( limA, limB, equation, result ) {
 			`<div id="resultdiv">
 				<i id="result-title">Resultado</i>
 					<p>Resultado: desde ${tmplimA} hasta ${tmpLimB}: &#x222b;
-						<i>(${equation})dx = </i>${result} </p>
+						<i>(${equation})dx = </i> <i id = "resultArea">${result} </i></p> 
 			</div>`;
 			/* &#x222b is the html code for the Integral */
 }
