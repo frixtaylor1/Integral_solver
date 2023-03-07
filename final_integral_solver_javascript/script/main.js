@@ -8,7 +8,7 @@
 */
 const limitA 	 = document.getElementById("limitA");
 const limitB 	 = document.getElementById("limitB");
-const step 	     = document.getElementById("stepSize");
+const step 	 = document.getElementById("stepSize");
 const expression = document.getElementById("expression");
 const buttonForm = document.getElementById("sendForm");
 
@@ -62,16 +62,16 @@ buttonForm.addEventListener("click", () => {
 	
     const limA = limitA.value.replaceAll("pi", "Math.PI")
 		.replace("°", "/360*2*Math.PI");
-	const limB = limitB.value.replaceAll("pi", "Math.PI")
+    const limB = limitB.value.replaceAll("pi", "Math.PI")
 		.replace("°", "/360*2*Math.PI");
     
     const stepOfIteration = step.value;
 	
-	let equation = parseExpression( expression );
-
+    let equation = parseExpression( expression );
+	
     const result = integrate( eval(limA), eval(limB), equation, parseFloat(stepOfIteration) );
 
-	displayResult( limitA, limitB, expression.value, result );
+    displayResult( limitA, limitB, expression.value, result );
 
 });
 
