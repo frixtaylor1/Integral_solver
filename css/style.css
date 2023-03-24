@@ -1,234 +1,168 @@
-
+@font-face {
+    font-family: 'Warriot';
+    src: url(./resources/Warriot-lgR3y.otf) format('truetype');
+}
 
 body {
-    font-style: italic;
-    color: aliceblue;
-    background: url(math.jpg);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-
-
-#main-titlle{
-    
-    font-size: xx-large;
-    text-shadow: 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px gold;
-
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-#main-titlle:hover{
-
-    text-shadow: 0 0 10px rgb(230, 185, 71), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
-    border-color: white;
-    color: white;
+nav li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
-#main-box{
-    
-    position: relative;
-    display: flex;
-    width: 900px;
-    height: 480px;
-    padding: 30px;
-    border-radius: 15px;
-    
+nav a {
+    color: #333;
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    text-decoration: none;
 }
 
-#form-box{
-    
-    text-shadow: 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px gold;
-    margin-left: 100px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(math.jpg);
-    width: 300px;
-    height: 360px;
-    padding: 5px;
-    border-radius: 15px;
-    box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
-
-
-   
+nav a:hover {
+    background-color: #ddd;
 }
 
-input {
-    
-    border-radius: 2px;
-    border-color: rgb(239, 212, 178);
-    background-color: rgb(232, 188, 116);
-    
-}
-input:hover {
-
-    background-color: rgb(247, 227, 176);
-    box-shadow: 0 0 10px rgb(247, 227, 176), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
-    border-color: white;
-    color: rgb(209, 164, 92);
-}
-
-input:focus {
-
-    background-color: rgb(246, 228, 194);
-    
-
-}
-
-input::selection {
-
-    background-color: rgb(237, 199, 104);
-}
-
-::placeholder {
-
-    color: rgb(93, 54, 4);
-}
-#sendForm{
-    margin-top: 20px;
-}
-#resultdiv{
-
-    text-shadow: 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px gold;
+.dropdown-content {
+    display: none;
     position: absolute;
-    margin-top: 43%;
-    right: 30%;
-    padding: 20px;
-    border-radius: 15px;
-    width: 400px;
-    box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(math.jpg);
-    
+    z-index: 1;
 }
 
-#result-title{
-
-    font-size:x-large;
-    
+.dropdown:hover .dropdown-content {
+    display: block;
 }
-#resultArea{
-    font-size:xx-large;
-}
-#result-title:hover{
-   
-    text-shadow: 0 0 10px rgb(230, 185, 71), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
-    border-color: white;
-    color: white;
 
+.fa-caret-down {
+    margin-left: 5px;
+}
+
+
+h2,
+h3,
+h4 {
+    margin: 0;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-titlle {
+    font-family: 'Warriot';
+    font-size: 2.5em;
+    margin-top: 1em;
+}
+
+#main-box {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    padding: 2em;
+    text-align: left;
+    width: 80%;
+}
+
+#form-box {
+    margin-bottom: 1em;
+}
+
+p {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"] {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
 }
 
 button {
-
-    position: relative;
-    color: rgb(91, 58, 5);
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #5b5b5b;
+    border: none;
+    border-bottom: 5px solid #464646;
+    box-shadow: 2px 2px 0 #464646;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
     border-radius: 10px;
-    border-color: rgb(117, 67, 20);
-    background-color: rgb(230, 171, 83);
-    padding: 5px 30px;
-    transition: 0.2;
-    box-shadow: 10px 10px 40px rgb(0, 0, 0);
+    padding: 10px 20px;
+    margin-top: 2em;
+    margin-left: 42%;
 }
-
+  
 button:hover {
-
-    background-color: rgb(247, 227, 176);
-    box-shadow: 0 0 10px rgb(247, 227, 176), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
-    border-color: white;
-    color: rgb(209, 164, 92);
-    
+    background-color: #464646;
+    box-shadow: none;
+    transform: translateY(2px);
 }
 
-#exemples{
-
-    text-shadow: 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px gold;
-    position: absolute;
-    right: 150px;
-    width: 300px;
-    height: 360px;
-    padding: 5px;
-    border-radius: 15px;
-    box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(math.jpg);
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
 }
 
-#exemples:hover {
-   
-    text-shadow: 0 0 10px rgb(230, 185, 71), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
-    border-color: white;
-    color: rgb(252, 251, 250);
-    
-}
-
-#secondtitle{
-    font-size: small;
-}
-
-
-video{
-    
-    
-    width: 350px;
-    height: 400px;
-    position: absolute;
-    margin-left: 90%;
-   
-
-}
-
-
-
-
-li {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-p.parrExamples {
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
     text-align: left;
 }
 
-;
-
-span {
-    position: relative;
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
-span sup {
-    position: absolute;
-    left: 0;
+.parrExamples {
+    margin: 0;
+    font-size: 1.2em;
 }
 
-#Copyright{
-    margin-top: 30px;
+#secondtitle {
+    margin-top: 2em;
 }
 
+video {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 2em auto;
+    width: 50%;
+    height: 50%;
+}
 
-@media (max-width:830px){
+#Copyright {
+    font-size: 0.8em;
+    margin-top: 2em;
+}
 
-    #main-box{
-        
-        
-        height: 900px;
-        flex-direction:column;
+#resultTitle {
+    font-size: xx-large;
+}
 
-
-    }
-
-    #form-box{
-
-        width: 300px;
-        margin-right: 10px;
-        margin-left: 50px;
-
-    }
-
-    #exemples{
-        margin-top: 40%;
-        width: 300px;
-        left: 20px;
-        margin-left: 50px;
-        
-    }
-
-    #resultdiv{
-        
-        width: 280px;
-        left: 20px;
-        margin-left: 50px;
-    }   
+#resultExpression {
+    margin-left: 20%;
+    font-size: 20px;
 }
