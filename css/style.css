@@ -7,7 +7,8 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #ccc;
     font-size: 16px;
-    line-height: 1.5;
+    margin-top: 0;
+    /*line-height: 1.5; */
 }
 
 #video-background {
@@ -18,7 +19,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-  }
+}
 
 nav ul {
     list-style: none;
@@ -28,7 +29,7 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 2px;
 }
 
 nav a {
@@ -135,7 +136,7 @@ button {
     border-radius: 10px;
     padding: 10px 20px;
     margin-top: 2em;
-    margin-left: 40%;
+    margin-left: 36%;
 }
   
 button:hover {
@@ -173,7 +174,6 @@ th {
 }
 
 video {
-    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 2em auto;
     width: 50%;
@@ -192,7 +192,7 @@ video {
 
 #resultTitle {
     color: rgb(0, 0, 0, 0.7);
-    font-size: xx-large;
+    font-size: 2em;
     margin-left: 38%;
 }
 
@@ -202,3 +202,22 @@ video {
     font-size: 20px;
 }
 
+@media (max-width: 400px) {
+    /* Estilos para dispositivos móviles pequeños aquí */
+    button {
+        margin-left: 15%;
+    }
+}
+  
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Estilos para dispositivos móviles medianos aquí */
+}
+  
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Estilos para dispositivos móviles grandes aquí */
+}
+  
+@media (min-width: 992px) {
+  /* Estilos para dispositivos móviles extra grandes aquí */
+}
+  
