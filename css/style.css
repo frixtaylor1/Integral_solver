@@ -78,6 +78,13 @@ ul {
     font-family: 'Warriot';
     font-size: 2.5em;
     margin-top: 1em;
+    color: rgb(255, 255, 255,0.6);
+}
+
+#main-titlle:hover{
+    
+    text-shadow: 0 0 1px rgba(74, 94, 171, 0.895), 0 0 5px rgba(140, 157, 214, 0.895), 0 0 10px rgba(246, 246, 252, 0.982)
+
 }
 
 #main-box {
@@ -112,6 +119,8 @@ p {
 }
 
 input[type="text"] {
+    
+    color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255, 0.5);
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -119,6 +128,12 @@ input[type="text"] {
     padding: 0.5em;
     width: 80%;
     margin-left: 10%;
+    
+}
+
+input::placeholder{
+
+    color: azure;
 }
 
 button {
@@ -126,7 +141,7 @@ button {
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
     background-color: #5b5b5b;
     border: none;
     border-bottom: 5px solid #464646;
@@ -136,7 +151,9 @@ button {
     border-radius: 10px;
     padding: 10px 20px;
     margin-top: 2em;
-    margin-left: 36%;
+    margin-left: 40%;
+    
+
 }
   
 button:hover {
